@@ -61,12 +61,5 @@ spec:
     apiVersion: cluster.open-cluster-management.io/v1alpha1
     name: gitops-clusters
     namespace: openshift-gitops
----
-apiVersion: pipelines.openshift.io/v1alpha1
-kind: GitopsService
-metadata:
-  name: cluster
-spec: {}
-##
 ### oc label ManagedCluster jclaretm02 cluster.open-cluster-management.io/clusterset=gitops-clusters --overwrite
 ### oc label ManagedCluster jclaretm02 gitops-cluster=true environment=production
