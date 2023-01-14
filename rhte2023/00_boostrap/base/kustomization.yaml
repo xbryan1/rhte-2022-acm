@@ -1,0 +1,4 @@
+---
+bases:
+- ./acm_operator/base
+- ./openshift
