@@ -1,9 +1,8 @@
 ---
-# Create ArgoCD Application Set
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: spring-app
+  name: rhte2023-app01
   namespace: openshift-gitops
 spec:
   generators:
@@ -11,7 +10,7 @@ spec:
       configMapRef: acm-placement
       labelSelector:
         matchLabels:
-          cluster.open-cluster-management.io/placement: spring-app-placement
+          cluster.open-cluster-management.io/placement: rhte2023-placement02
       requeueAfterSeconds: 180
   template:
     metadata:
@@ -32,16 +31,3 @@ spec:
           selfHeal: true
         syncOptions:
         - CreateNamespace=true
----
-# Create Placement based on Managed Cluster labels
-apiVersion: cluster.open-cluster-management.io/v1beta1
-kind: Placement
-metadata:
-  name: spring-app-placement
-  namespace: openshift-gitops
-spec:
-  predicates:
-  - requiredClusterSelector:
-      labelSelector:
-        matchLabels:
-          gitops-cluster: "true"

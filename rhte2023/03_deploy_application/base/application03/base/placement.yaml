@@ -2,8 +2,8 @@
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
 metadata:
-  name: rhte2023-placement01
+  name: rhte2023-placement03
   namespace: openshift-gitops
 spec:
   clusterSets:
-    - rhte2023-01
+    - rhte2023-02

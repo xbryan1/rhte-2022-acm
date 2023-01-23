@@ -2,3 +2,6 @@
 bases:
 - ./acm_operator/base
 - ./openshift
+- ./acm_multiclusterhub
+- ./gitops_operator
+- ./gitops_acm

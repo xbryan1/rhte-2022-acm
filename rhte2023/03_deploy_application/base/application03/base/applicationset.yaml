@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: rhte2023-app01
+  name: spring-app
   namespace: openshift-gitops
 spec:
   generators:
@@ -10,7 +10,7 @@ spec:
       configMapRef: acm-placement
       labelSelector:
         matchLabels:
-          cluster.open-cluster-management.io/placement: rhte2023-placement01
+          cluster.open-cluster-management.io/placement: rhte2023-placement03
       requeueAfterSeconds: 180
   template:
     metadata:
