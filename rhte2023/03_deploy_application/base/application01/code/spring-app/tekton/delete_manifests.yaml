@@ -1,0 +1,21 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: delete-manifests
+spec:
+  workspaces:
+  - name: source
+  params:
+    - name: manifest_dir
+      description: The directory in source that contains Kustomize manifests
+      type: string
+  steps:
+    - name: apply
+      image: image-registry.openshift-image-registry.svc:5000/openshift/cli:latest
+      workingDir: /workspace/source
+      command: ["/bin/bash", "-c"]
+      args:
+        - |-
+          echo "Deleting manifests from $(inputs.params.manifest_dir) directory"
+          oc delete -k $(inputs.params.manifest_dir)
+          echo "Resources deleted!"

@@ -1,0 +1,26 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: apply-manifests
+spec:
+  workspaces:
+  - name: source
+  params:
+    - name: manifest_dir
+      description: The directory in source that contains Kustomize manifests
+      type: string
+    - name: namespace
+      description: Target deployment namespace
+      type: string
+  steps:
+    - name: apply
+      image: image-registry.openshift-image-registry.svc:5000/openshift/cli:latest
+      workingDir: /workspace/source
+      command: ["/bin/bash", "-c"]
+      args:
+        - |-
+          echo "Applying manifests from $(inputs.params.manifest_dir) directory"
+          oc apply -k $(inputs.params.manifest_dir)
+          oc rollout status deploy/spring-app -n $(inputs.params.namespace)
+
+          oc get route spring-app -n $(inputs.params.namespace)
