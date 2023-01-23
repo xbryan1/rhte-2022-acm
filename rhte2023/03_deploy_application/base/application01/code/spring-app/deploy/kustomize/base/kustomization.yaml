@@ -1,4 +1,0 @@
-resources:
-- spring-app-deployment.yaml
-- spring-app-route.yaml
-- spring-app-service.yaml
