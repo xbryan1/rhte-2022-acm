@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/name: rhte2023-application
+    app.kubernetes.io/part-of: app-rhte2023-application
+  name: rhte2023-application
+  namespace: rhte2023-application
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: rhte2023-application
+      app.kubernetes.io/part-of: app-rhte2023-application
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/name: rhte2023-application
+        app.kubernetes.io/part-of: app-rhte2023-application
+    spec:
+      containers:
+      - image: nginxinc/nginx-unprivileged:latest
+        imagePullPolicy: Always
+        name: rhte2023-application
+        ports:
+        - containerPort: 8080
+        resources: {}
+      serviceAccountName: default
+status: {}
