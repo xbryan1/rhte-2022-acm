@@ -8,7 +8,7 @@ metadata:
   name: rhte2023-application
   namespace: rhte2023-application
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app.kubernetes.io/name: rhte2023-application
