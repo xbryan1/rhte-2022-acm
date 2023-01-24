@@ -9,7 +9,7 @@ spec:
         configMapRef: acm-placement
         labelSelector:
           matchLabels:
-            cluster.open-cluster-management.io/placement: rhte2023-argocd-placement
+            cluster.open-cluster-management.io/placement: rhte2023-gitops-clusters
         requeueAfterSeconds: 180
   template:
     metadata:
@@ -19,9 +19,9 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/jclaret/gitops.git
+        repoURL: https://github.com/xbryan1/rhte-2023-acm-apps.git
         targetRevision: main
-        path: config/argocd
+        path: rhte2023/04_deploy_applications/config/argocd
       destination:
         namespace: openshift-gitops
         server: "{{server}}"

@@ -19,9 +19,9 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/jclaret/gitops.git
+        repoURL: https://github.com/xbryan1/rhte-2023-acm-apps.git
         targetRevision: main
-        path: config/cicd/overlays
+        path: rhte2023/04_deploy_applications/config/tekton/
       destination:
         namespace: openshift-gitops
         server: "{{server}}"
