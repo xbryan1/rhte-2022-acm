@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rhte2023-bootstrap-gitops
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: https://api.jclaretm.nasatam.support:6443
+  project: default
+  source:
+    path: rhte2023/02_bootstrap/base
+    repoURL: https://github.com/xbryan1/rhte-2023-acm-apps.git
