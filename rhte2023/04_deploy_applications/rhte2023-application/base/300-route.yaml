@@ -2,13 +2,13 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   creationTimestamp: null
-  name: rhte2023-application
-  namespace: rhte2023-application
+  name: rhte2023-app01
+  namespace: rhte2023-app01
 spec:
   port:
-    targetPort: http
+    targetPort: 8001-tcp
   to:
     kind: Service
-    name: rhte2023-application
+    name: rhte2023-app01
     weight: 100
   wildcardPolicy: None
