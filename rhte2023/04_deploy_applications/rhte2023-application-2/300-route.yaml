@@ -1,0 +1,19 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: rhte2023-app02
+  namespace: rhte2023-app02
+  labels:
+    app: rhte2023-app02
+    app.kubernetes.io/component: rhte2023-app02
+    app.kubernetes.io/instance: rhte2023-app02
+spec:
+  to:
+    kind: Service
+    name: rhte2023-app02
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+    destinationCACertificate: ''
+  port:
+    targetPort: 8080-tcp
