@@ -3,6 +3,9 @@ from flask import Flask, render_template, request
 import os
 import openai
 from time import time,sleep
+import base64
+from IPython.display import display
+from PIL import Image
 
 
 app = Flask(__name__)
@@ -12,24 +15,22 @@ app = Flask(__name__, static_url_path='/static')
 # Create an openaiapikey.txt file and save your api key.
 openai.api_key = "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"
 
-
-def bot(prompt, engine='text-davinci-002', temp=0.9, top_p=1.0, tokens=1000, freq_pen=0.0, pres_pen=0.5, stop=['<<END>>']):
+def bot(prompt, size="1024x1024", n=1, response_format="b64_json"):
     max_retry = 1
     retry = 0
     while True:
         try:
-            response = openai.Completion.create(
-                engine=engine,
-                prompt=prompt,
-                temperature=temp,
-                max_tokens=tokens,
-                top_p=top_p,
-                frequency_penalty=freq_pen,
-                presence_penalty=pres_pen,
-                stop=[" User:", " AI:"])
-            text = response['choices'][0]['text'].strip()
+            response = openai.Image.create(
+                prompt = prompt,
+                size = "1024x1024",
+                n = 1,
+                response_format = "url"
+            )
+
+            text = response["data"][0]["url"]
             print(text)
             return text
+
         except Exception as oops:
             retry += 1
             if retry >= max_retry:

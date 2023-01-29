@@ -1,0 +1,16 @@
+---
+apiVersion: cluster.open-cluster-management.io/v1beta1
+kind: Placement
+metadata:
+  name: rhte2023-gitops-clusters-cpu
+  namespace: openshift-gitops
+spec:
+  numberOfClusters: 1
+  prioritizerPolicy:
+    configurations:
+      - scoreCoordinate:
+          builtIn: ResourceAllocatableCPU
+        weight: 2
+      - scoreCoordinate:
+          builtIn: ResourceAllocatableMemory
+        weight: 2

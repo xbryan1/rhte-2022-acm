@@ -1,5 +1,5 @@
-# podman build -t jclaret/chatbot .
-# podman push jclaret/chatbot quay.io/jclaret/chatbot
+# podman build -t jclaret/chatdraw .
+# podman push jclaret/chatbot quay.io/jclaret/chatdraw
 FROM python:3.8-slim-buster
 
 COPY requirements.txt .
