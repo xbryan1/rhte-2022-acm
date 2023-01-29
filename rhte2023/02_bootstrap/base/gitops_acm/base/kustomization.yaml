@@ -1,6 +1,9 @@
 ---
 resources:
-- acm_managedclusterset_vendor.yaml
-- acm_managedclustersetbinding_vendor.yaml
-- acm_placement_vendor.yaml
-- acm_gitopscluster_vendor.yaml
+- acm_managedclusterset.yaml
+- acm_managedclustersetbinding.yaml
+- acm_placement.yaml
+- acm_placement_cpu.yaml
+- acm_placement_location.yaml
+- acm_placement_version.yaml
+- acm_gitopscluster.yaml

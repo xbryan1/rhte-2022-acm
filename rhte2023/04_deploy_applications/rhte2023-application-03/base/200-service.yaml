@@ -1,12 +1,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: rhte2023-app02
-  namespace: rhte2023-app02
+  name: rhte2023-application-03
+  namespace: rhte2023-application-03
   labels:
-    app: rhte2023-app02
-    app.kubernetes.io/component: rhte2023-app02
-    app.kubernetes.io/instance: rhte2023-app02
+    app: rhte2023-application-03
+    app.kubernetes.io/component: rhte2023-application-03
+    app.kubernetes.io/instance: rhte2023-application-03
 spec:
   ports:
     - name: 8080-tcp
@@ -26,4 +26,4 @@ spec:
   ipFamilyPolicy: SingleStack
   sessionAffinity: None
   selector:
-    deployment: rhte2023-app02
+    deployment: rhte2023-application-03

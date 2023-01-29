@@ -2,7 +2,7 @@
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: ManagedClusterSetBinding
 metadata:
-  name: rhte2023-gitops-clusters-vendor
+  name: rhte2023-gitops-clusters
   namespace: openshift-gitops
 spec:
-  clusterSet: rhte2023-gitops-clusters-vendor
+  clusterSet: rhte2023-gitops-clusters

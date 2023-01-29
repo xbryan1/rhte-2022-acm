@@ -1,16 +1,16 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: rhte2023-app02
-  namespace: rhte2023-app02
+  name: rhte2023-application-03
+  namespace: rhte2023-application-03
   labels:
-    app: rhte2023-app02
-    app.kubernetes.io/component: rhte2023-app02
-    app.kubernetes.io/instance: rhte2023-app02
+    app: rhte2023-application-03
+    app.kubernetes.io/component: rhte2023-application-03
+    app.kubernetes.io/instance: rhte2023-application-03
 spec:
   to:
     kind: Service
-    name: rhte2023-app02
+    name: rhte2023-application-03
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect

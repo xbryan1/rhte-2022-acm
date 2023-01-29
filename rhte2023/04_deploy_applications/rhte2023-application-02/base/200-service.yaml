@@ -3,10 +3,10 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app.kubernetes.io/component: rhte2023-app02
-    app.kubernetes.io/instance: rhte2023-app02
-  name: rhte2023-app02
-  namespace: rhte2023-app02
+    app.kubernetes.io/component: rhte2023-application-02
+    app.kubernetes.io/instance: rhte2023-application-02
+  name: rhte2023-application-02
+  namespace: rhte2023-application-02
 spec:
   ports:
   - name: 8001-tcp
@@ -14,7 +14,7 @@ spec:
     protocol: TCP
     targetPort: 8001
   selector:
-    app.kubernetes.io/component: rhte2023-app02
-    app.kubernetes.io/instance: rhte2023-app02
+    app.kubernetes.io/component: rhte2023-application-02
+    app.kubernetes.io/instance: rhte2023-application-02
 status:
   loadBalancer: {}

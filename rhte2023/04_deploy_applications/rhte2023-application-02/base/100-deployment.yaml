@@ -3,29 +3,29 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: rhte2023-app02
-    app.kubernetes.io/component: rhte2023-app02
-    app.kubernetes.io/instance: rhte2023-app02
-  name: rhte2023-app02
-  namespace: rhte2023-app02
+    app: rhte2023-application-02
+    app.kubernetes.io/component: rhte2023-application-02
+    app.kubernetes.io/instance: rhte2023-application-02
+  name: rhte2023-application-02
+  namespace: rhte2023-application-02
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app.kubernetes.io/component: rhte2023-app02
-      app.kubernetes.io/instance: rhte2023-app02
+      app.kubernetes.io/component: rhte2023-application-02
+      app.kubernetes.io/instance: rhte2023-application-02
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app.kubernetes.io/component: rhte2023-app02
-        app.kubernetes.io/instance: rhte2023-app02
+        app.kubernetes.io/component: rhte2023-application-02
+        app.kubernetes.io/instance: rhte2023-application-02
     spec:
       containers:
       - image: quay.io/jclaret/chatdraw:latest
         imagePullPolicy: Always
-        name: rhte2023-app02
+        name: rhte2023-application-02
         ports:
         - containerPort: 8001
           protocol: TCP
