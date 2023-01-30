@@ -11,11 +11,12 @@ spec:
   prioritizerPolicy:
     configurations:
       - scoreCoordinate:
-          builtIn: ResourceAllocatableCPU
+          type: BuiltIn
+          builtIn: 
+            ResourceAllocatableCPU
+        weight: 2
       - scoreCoordinate:
-          builtIn: ResourceAllocatableMemory
-      - scoreCoordinate:
-          type: AddOn
-          addOn:
-            resourceName: default
-            scoreName: cpuratio
+          type: BuiltIn
+          builtIn: 
+            ResourceAllocatableMemory
+        weight: 2
