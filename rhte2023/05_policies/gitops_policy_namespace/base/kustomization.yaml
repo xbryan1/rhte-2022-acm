@@ -1,0 +1,4 @@
+resources:
+- 100-policy.yaml
+- 200-placementrule.yaml
+- 300-placementbinding.yaml
