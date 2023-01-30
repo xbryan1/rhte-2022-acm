@@ -4,4 +4,3 @@ resources:
 - 200-service.yaml
 - 300-route.yaml
 - 400-configmap.yaml
-- 500-hpa.yaml
