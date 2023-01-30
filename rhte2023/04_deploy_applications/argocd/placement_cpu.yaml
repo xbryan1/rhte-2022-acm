@@ -14,3 +14,8 @@ spec:
           builtIn: ResourceAllocatableCPU
       - scoreCoordinate:
           builtIn: ResourceAllocatableMemory
+      - scoreCoordinate:
+          type: AddOn
+          addOn:
+            resourceName: default
+            scoreName: cpuratio
