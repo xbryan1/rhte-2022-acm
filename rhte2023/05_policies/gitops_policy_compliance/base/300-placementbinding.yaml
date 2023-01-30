@@ -1,14 +1,13 @@
----
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
 metadata:
-  name: namespace-policy-placementbinding
+  name: compliance-policy-placement
   namespace: default
 placementRef:
-  name: namespace-policy-placement
+  name: compliance-policy-placement
   apiGroup: apps.open-cluster-management.io
   kind: PlacementRule
 subjects:
-  - name: namespace-policy
+  - name: compliance-policy
     apiGroup: policy.open-cluster-management.io
     kind: Policy
