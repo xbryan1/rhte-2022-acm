@@ -28,7 +28,7 @@ public class ImageController {
     private String applicationName;
 
     Random random = new Random();
-    int max = 25;
+    int max = 1;
     int min = 1;
     
     // Return the image from the classpath location using ResponseEntity
