@@ -12,7 +12,5 @@ spec:
     configurations:
       - scoreCoordinate:
           builtIn: ResourceAllocatableCPU
-        weight: 2
       - scoreCoordinate:
           builtIn: ResourceAllocatableMemory
-        weight: 2
