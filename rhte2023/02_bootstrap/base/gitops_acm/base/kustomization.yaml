@@ -3,5 +3,5 @@ resources:
 - acm_managedclusterset.yaml
 - acm_managedclustersetbinding.yaml
 - acm_placement.yaml
-- acm_placement_version.yaml
+- acm_placement_environment.yaml
 - acm_gitopscluster.yaml

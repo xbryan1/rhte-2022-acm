@@ -9,12 +9,6 @@ spec:
     - rhte2023-gitops-clusters
   predicates:
     - requiredClusterSelector:
-        claimSelector:
-          matchExpressions:
-            - key: version.openshift.io
-              operator: In
-              values:
-                - 4.10.15
         labelSelector:
           matchExpressions:
             - key: Environment
