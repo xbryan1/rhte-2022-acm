@@ -5,6 +5,8 @@ metadata:
   name: rhte2023-gitops-clusters
   namespace: openshift-gitops
 spec:
+  clusterSets:
+    - rhte2023-gitops-clusters
   predicates:
     - requiredClusterSelector:
         labelSelector:

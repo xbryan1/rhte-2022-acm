@@ -11,3 +11,6 @@ spec:
   source:
     path: rhte2023/02_bootstrap/base
     repoURL: https://github.com/xbryan1/rhte-2023-acm-apps.git
+  syncPolicy:
+    automated:
+      prune: true
