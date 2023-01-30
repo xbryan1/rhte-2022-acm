@@ -14,9 +14,9 @@ spec:
           type: BuiltIn
           builtIn: 
             ResourceAllocatableCPU
-        weight: 2
+        weight: -9
       - scoreCoordinate:
           type: BuiltIn
           builtIn: 
             ResourceAllocatableMemory
-        weight: 2
+        weight: -9
