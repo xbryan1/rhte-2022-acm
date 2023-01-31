@@ -2,3 +2,6 @@ openai
 requests
 flask_cors
 flask
+ipython
+Pillow
+
