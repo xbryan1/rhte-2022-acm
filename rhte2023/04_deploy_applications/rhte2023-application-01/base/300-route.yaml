@@ -12,3 +12,6 @@ spec:
     name: rhte2023-application-01
     weight: 100
   wildcardPolicy: None
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
